@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Expired Items{% endblock %}
+
+{% block content %}
+<br/>
+<form action="" method="POST">
+    <div style="float:right">
+        <label for="item name">Delete Item</label>
+        <input type="text" name="name" id="name" placeholder="Enter Item Name">
+        <button type="submit" class="btn btn-secondary">Delete</button>
+    </div>
+</form>
+<br/>
+
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Items</th>
+            <th>Exipry Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in expired %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.expiry_date }}</td>
+        </tr>
+    </tbody>
+        {% endfor %}
+</table>
+
+
+
+
+
+{% endblock %}

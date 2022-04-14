@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Item Report{% endblock %}
+
+{% block content %}
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Item Name</th>
+            <th>Availibility in Stock</th>
+            <th>Date Created</th>
+            <th>Last Modified</th>
+            <th>Manufacturing Date</th>
+            <th>Expiry Date</th>
+            <th>Per Unit Price</th>
+            <th>Company</th>
+            <th>Item Description</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td>{{ Item.name }}</td>
+            <td>{{ Item.quantity }}</td>
+            <td>{{ Item.created_date }}</td>
+            <td>{{ Item.last_modified_date }}</td>
+            <td>{{ Item.manufactured_date }}</td>
+            <td>{{ Item.expiry_date }}</td>
+            <td>{{ Item.price }}</td>
+            <td>{{ Item.company }}</td>
+            <td>{{ Item.description }}</td>
+        </tr>
+    </tbody>
+    <!--Add Flash message if the quantity of the product in the stock is too low-->
+    
+</table>
+
+{% endblock %}

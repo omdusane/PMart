@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Add Item{% endblock %}
+
+{% block content %}
+<form method="POST">
+   <br>
+   <div style="border: solid 2px; width:500px; height:500px">
+ <h3 style="text-align: center;">Add Item</h3>
+ <br>
+ <div style="padding-left: 10px;">
+ <div class="form-group">
+     <label for="name">Item Name</label>
+     <input type="text", name="name" id="name" placeholder="Enter Item Name">
+ </div>
+ <div class="form-group">
+    <label for="category">Category</label>
+    <input type="text" name="category" id="category" placeholder="Enter Category">
+ </div>
+ <div class="form-group">
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" id="quantity" min="1" placeholder="Enter Quantity">
+ </div>
+ <div class="form-group">
+    <label for="company">Company</label>
+    <input type="text" name="company" id="company" placeholder="Enter Company Name">
+ </div>
+ <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" name="price" id="price" placeholder="Enter Per Unit Price">
+ </div>
+ <div class="form-group">
+   <label for="m_date">Manufacturing Date</label>
+   <input type="date" name="m_date" id="m_date" placeholder="Enter Manufacturing Date">
+</div>
+<div class="form-group">
+   <label for="e_date">Expiry Date</label>
+   <input type="date" name="e_date" id="e_date" placeholder="Enter Expiry Date">
+</div>
+ <div class="form-group">
+   <label for="description">Description</label>
+   <input type="text" name="description" id="description" placeholder="Enter Item Description">
+</div>
+<div class="form-group">
+   <label for="rack">Rack No</label>
+   <input type="text" name="rack" id="rack" placeholder="Enter Rack No">
+</div>
+</div>
+ <br/>
+ <div class="text-center">
+ <button type="submit" class="btn btn-primary" >Add Item</button>
+</div>
+</div>
+</form>
+
+{% endblock %}

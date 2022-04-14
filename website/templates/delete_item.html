@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Item{% endblock %}
+
+{% block content %}
+
+<br>
+<form method="POST">
+<div style="border: solid 2px; width:400px; height:300px">
+    <h3 style="text-align: center;">Delete Item</h3>
+    <br>
+    <div style="padding-left: 10px;">
+    <div>
+        <label for="name">Item Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter Item name">
+    </div>
+    <div>
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" id="quantity" placeholder="Enter Quantity" min="1">
+    </div>
+    <br/>
+    </div>
+    <div class="text-center">
+        <button type="submit"  class="btn btn-primary">Delete</button>
+    </div>
+</div>
+</form>
+
+{% endblock %}

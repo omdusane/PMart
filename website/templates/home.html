@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<br/>
+<form action="" method="POST">
+    <div style="float:right">
+        <input type="text" name="name" id="name" placeholder="Enter Item Name">
+        <button type="submit" class="btn btn-secondary">Search</button>
+    </div>
+</form>
+<br/>
+<br>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Sr. No</th>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th>Stock Availibility</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in user.items  %}
+        <tr>
+            <!--instead of button use <a> tag-->
+            <td>{{ item.id }}</td>
+            <td><a style="color:inherit" href="{{url_for('views.report',id=item.id)}}">{{ item.name }}</a></td>
+            <td>{{ item.category }}</td>
+            <td>{{ item.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
