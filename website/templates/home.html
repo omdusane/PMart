@@ -2,18 +2,42 @@
 
 {% block title %}Home{% endblock %}
 {% block content %}
+<head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+        .thead{
+            background-color:#661C1C ;
+            color:white
+        }
+        .btn{
+            background-color: #661C1C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
 <br/>
 <form action="" method="POST">
     <div style="float:right">
         <input type="text" name="name" id="name" placeholder="Enter Item Name">
-        <button type="submit" class="btn btn-secondary">Search</button>
+        <button type="submit" class="btn">Search</button>
     </div>
 </form>
 <br/>
 <br>
 
 <table class="table">
-    <thead class="thead-dark">
+    <thead class="thead">
         <tr>
             <th>Sr. No</th>
             <th>Item Name</th>
@@ -33,4 +57,5 @@
         {% endfor %}
     </tbody>
 </table>
+</body>
 {% endblock %}
