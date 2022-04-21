@@ -3,7 +3,7 @@ from flask import Blueprint, flash, redirect, render_template, request, session,
 from flask_login import login_required, current_user
 from . import db
 from website.models import Item
-from datetime import date
+from datetime import date, datetime
 
 
 views = Blueprint('views',__name__)
@@ -38,8 +38,8 @@ def add_item():
         price = request.form.get('price')
         description = request.form.get('description')
         rack = request.form.get('rack')
-        m_date = request.form.get('m_date')
-        e_date = request.form.get('e_date')
+        m_date = datetime.strptime(request.form.get('m_date'), "%Y-%m-%d")
+        e_date = datetime.strptime(request.form.get('e_date'),  "%Y-%m-%d")
 
         item = Item.query.filter_by(name=name).first()
 
